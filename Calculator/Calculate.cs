@@ -14,7 +14,6 @@ namespace Calculator
         {
             while (choice.ToLower() != "")
             {
-                
                 Console.WriteLine();
                 Console.WriteLine("Choose one of the following options: ");
                 Console.WriteLine();
@@ -30,27 +29,35 @@ namespace Calculator
                 {
                     case "1":
                         Add();
-                        break;
-                    case "2":
-                        Subtract();
-                        break;
-                    case "3":
-                        Multiply();
-                        break;
-                    case "4":
-                        Divide();
+                        Console.WriteLine();
                         break;
                     case "+":
                         Add();
+                        Console.WriteLine();
+                        break;
+                    case "2":
+                        Subtract();
+                        Console.WriteLine();
                         break;
                     case "-":
                         Subtract();
+                        Console.WriteLine();
+                        break;
+                    case "3":
+                        Multiply();
+                        Console.WriteLine();
                         break;
                     case "*":
                         Multiply();
+                        Console.WriteLine();
+                        break;
+                    case "4":
+                        Divide();
+                        Console.WriteLine();
                         break;
                     case "/":
                         Divide();
+                        Console.WriteLine();
                         break;
                 }
             }
@@ -61,9 +68,10 @@ namespace Calculator
             int userInput1 = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Second number: ");
             int userInput2 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine();
             int add = Calculate.Add(userInput1, userInput2);
             Console.WriteLine();
-            Console.WriteLine(userInput1 +" + "+ userInput2 +" = "+ add);
+            Console.WriteLine("Result: " + userInput1 +" + "+ userInput2 +" = "+ add);
         }
         public void Subtract()
         {
@@ -71,9 +79,10 @@ namespace Calculator
             int userInput1 = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Second number: ");
             int userInput2 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine();
             int subtract = Calculate.Subtract(userInput1, userInput2);
             Console.WriteLine();
-            Console.WriteLine(userInput1 + " - " + userInput2 + " = " + subtract);
+            Console.WriteLine("Result: " + userInput1 + " - " + userInput2 + " = " + subtract);
         }
         public void Multiply()
         {
@@ -81,9 +90,10 @@ namespace Calculator
             int userInput1 = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Second number: ");
             int userInput2 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine();
             int multiply = Calculate.Multiply(userInput1, userInput2);
             Console.WriteLine();
-            Console.WriteLine(userInput1 + " x " + userInput2 + " = " + multiply);
+            Console.WriteLine("Result: " + userInput1 + " x " + userInput2 + " = " + multiply);
         }
         public void Divide()
         {
@@ -91,9 +101,10 @@ namespace Calculator
             int userInput1 = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Second number: ");
             int userInput2 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine();
             int divide = Calculate.Divide(userInput1, userInput2);
             Console.WriteLine();
-            Console.WriteLine(userInput1 + " / " + userInput2 + " = " + divide);
+            Console.WriteLine("Result: " + userInput1 + " / " + userInput2 + " = " + divide);
         }
         public static int Add(int firstNumber, int secondNumber)
         {
